@@ -1,22 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Sun from "./Components/ComponentCSS/Sun";
+import Navbar from "./Components/Navbar";
+import { Canvas } from "react-three-fiber";
+import { OrbitControls } from "@react-three/drei";
+import { useState } from "react";
+import Moon from "./Components/ComponentCSS/Moon";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(true);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        {darkMode ? (
+          <div className="canvas-container">
+            <Canvas className="canvas">
+              <OrbitControls
+                enableZoom={false}
+                autoRotate={true}
+                autoRotateSpeed={2.0}
+              />
+              <ambientLight intensity={0.5} />
+              <Sun />
+            </Canvas>
+          </div>
+        ) : (
+          <div className="moon-container">
+            <Canvas className="canvas">
+              <OrbitControls
+                enableZoom={false}
+                autoRotate={true}
+                autoRotateSpeed={2.0}
+              />
+              <ambientLight intensity={0.5} />
+              <Moon />
+            </Canvas>
+          </div>
+        )}
+        ;
       </header>
     </div>
   );
