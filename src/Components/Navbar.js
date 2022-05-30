@@ -20,6 +20,7 @@ import * as FaIcons from "react-icons/fa";
 
 const Navbar = ({ darkMode, setDarkMode }) => {
   const [showNav, setShowNav] = useState(false);
+
   return (
     <Router>
       <nav>
@@ -79,7 +80,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         </div>
       )}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={<Home darkMode={darkMode} setDarkMode={setDarkMode} />}
+        />
         <Route path="/Work" element={<Work />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/About" element={<About />} />

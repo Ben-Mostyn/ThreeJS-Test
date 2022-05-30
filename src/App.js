@@ -18,7 +18,7 @@ function App() {
               <OrbitControls
                 enableZoom={false}
                 autoRotate={true}
-                autoRotateSpeed={2.0}
+                autoRotateSpeed={1.0}
               />
               <ambientLight intensity={0.5} />
               <Sun />
@@ -30,7 +30,7 @@ function App() {
               <OrbitControls
                 enableZoom={false}
                 autoRotate={true}
-                autoRotateSpeed={2.0}
+                autoRotateSpeed={1.0}
               />
               <ambientLight intensity={0.5} />
               <Moon />
