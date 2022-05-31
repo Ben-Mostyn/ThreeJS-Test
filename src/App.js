@@ -1,10 +1,10 @@
 import "./App.css";
-import Sun from "./Components/ComponentCSS/Sun";
+import Sun from "./Components/Sun";
 import Navbar from "./Components/Navbar";
 import { Canvas } from "react-three-fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useState } from "react";
-import Moon from "./Components/ComponentCSS/Moon";
+import Moon from "./Components/Moon";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);

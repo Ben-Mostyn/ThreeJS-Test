@@ -1,11 +1,12 @@
 import React from "react";
 import * as THREE from "three";
-import { Sphere } from "@react-three/drei";
+import { Sphere, useTexture } from "@react-three/drei";
 import { shaderMaterial } from "@react-three/drei";
 import glsl from "babel-plugin-glsl/macro";
 import { extend, useFrame } from "react-three-fiber";
 import { useState, useRef } from "react";
-import { Quaternion } from "three";
+import { MeshStandardMaterial, Quaternion, TextureLoader } from "three";
+import sunImg from "./ComponentCSS/imgs/soon.jpg";
 
 const WaveShaderMaterial = shaderMaterial(
   //Uniform
@@ -31,13 +32,13 @@ const WaveShaderMaterial = shaderMaterial(
 extend({ WaveShaderMaterial });
 
 export default function Sun() {
-  // const mesh = useRef();
-  // useFrame(() => (mesh.current.rotation.x += 0.01));
+  const texture = useTexture(sunImg);
 
   return (
-    <mesh>
-      <Sphere visible args={[1, 140, 140]} scale={3}>
-        <waveShaderMaterial uColor={"#F9FF16"} wireframe />
+    <mesh map={texture}>
+      <Sphere visible args={[1, 40, 40]} scale={3}>
+        {/* <waveShaderMaterial uColor={"#F9FF16"} /> */}
+        <meshBasicMaterial map={texture} />
       </Sphere>
     </mesh>
   );
