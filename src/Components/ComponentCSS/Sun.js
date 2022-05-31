@@ -36,7 +36,7 @@ export default function Sun() {
 
   return (
     <mesh>
-      <Sphere visible args={[1, 30, 30]} scale={3}>
+      <Sphere visible args={[1, 40, 40]} scale={3}>
         <waveShaderMaterial uColor={"#F9FF16"} wireframe />
       </Sphere>
     </mesh>
