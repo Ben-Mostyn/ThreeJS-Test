@@ -1,14 +1,15 @@
 .canvas-container {
   height: 30vh;
 
-  width: 287px;
+  width: 286px;
   position: absolute;
   right: 0px;
   top: 10px;
 
   border-radius: 50%;
   -webkit-box-shadow: 5px 5px 45px 34px rgba(249, 255, 22, 0.44);
-  box-shadow: 5px 5px 45px 34px rgba(249, 255, 22, 0.44);
+  box-shadow: 5px 5px 45px 34px rgba(249, 255, 22, 0.44),
+    inset 5px 5px 45px 34px rgba(249, 255, 22, 0.44);
 }
 
 .moon-container {
@@ -21,7 +22,8 @@
 
   border-radius: 50%;
   -webkit-box-shadow: 5px 5px 45px 34px rgba(255, 255, 255, 0.44);
-  box-shadow: 5px 5px 45px 34px rgba(229, 229, 229, 0.44);
+  box-shadow: 5px 5px 45px 34px rgba(229, 229, 229, 0.44),
+    inset 5px 5px 45px 34px rgba(229, 229, 229, 0.44);
 }
 
 @media (max-width: 1300px) {

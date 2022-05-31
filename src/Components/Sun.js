@@ -6,7 +6,8 @@ import glsl from "babel-plugin-glsl/macro";
 import { extend, useFrame } from "react-three-fiber";
 import { useState, useRef } from "react";
 import { MeshStandardMaterial, Quaternion, TextureLoader } from "three";
-import sunImg from "./ComponentCSS/imgs/soon.jpg";
+import sunImg from "./ComponentCSS/imgs/soon.png";
+import alpha1 from "./ComponentCSS/imgs/Alpha.png";
 
 const WaveShaderMaterial = shaderMaterial(
   //Uniform
@@ -33,12 +34,13 @@ extend({ WaveShaderMaterial });
 
 export default function Sun() {
   const texture = useTexture(sunImg);
+  const texture1 = useTexture(alpha1);
 
   return (
     <mesh map={texture}>
       <Sphere visible args={[1, 40, 40]} scale={3}>
         {/* <waveShaderMaterial uColor={"#F9FF16"} /> */}
-        <meshBasicMaterial map={texture} />
+        <meshBasicMaterial map={texture} alphaMap={texture1} />
       </Sphere>
     </mesh>
   );
