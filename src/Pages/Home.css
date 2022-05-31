@@ -55,7 +55,8 @@
   top: 30%;
   width: 150px;
   height: 50px;
-  animation-duration: 35s;
+  animation-duration: 115s;
+  animation-delay: 5s;
 }
 
 .cloud.three {
@@ -64,15 +65,16 @@
   width: 300px;
   height: 100px;
 
-  animation-duration: 40s;
+  animation-duration: 140s;
+  animation-delay: 10s;
 }
 
 .cloud {
   position: absolute;
-  left: 0;
+  left: -100%;
   background: white;
   border-radius: 1000px;
-  animation: cloud 70s infinite linear;
+  animation: cloud 100s infinite linear;
   z-index: 100;
 }
 
@@ -102,13 +104,16 @@
   top: 35%;
   width: 120px;
   height: 37px;
+  animation-duration: 105s;
+  animation-delay: 2s;
 }
 
 .cloud1.five {
   top: 35%;
   width: 150px;
   height: 50px;
-  animation-duration: 52s;
+  animation-duration: 202s;
+  animation-delay: 1s;
 }
 
 .cloud1.six {
@@ -117,12 +122,13 @@
   width: 300px;
   height: 100px;
 
-  animation-duration: 35s;
+  animation-duration: 185s;
+  animation-delay: 12s;
 }
 
 .cloud1 {
   position: absolute;
-  left: 0;
+  left: -100%;
   background: rgb(236, 236, 236);
   border-radius: 1000px;
   animation: cloud 47s infinite linear;
@@ -151,10 +157,148 @@
   border-radius: 50%;
 }
 
+.cloud2 {
+  position: absolute;
+  left: 0;
+  background: rgb(205, 205, 205);
+  border-radius: 1000px;
+  animation: cloud 47s infinite linear;
+  z-index: 100;
+}
+
+.cloud2::before {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: 40%;
+  width: 50%;
+  height: 150%;
+  background: rgb(205, 205, 205);
+  border-radius: 50%;
+}
+
+.cloud2::after {
+  content: "";
+  position: absolute;
+  top: -30%;
+  right: 50%;
+  width: 30%;
+  height: 100%;
+  background: rgb(205, 205, 205);
+  border-radius: 50%;
+}
+.cloud2.seven {
+  top: 15%;
+
+  width: 300px;
+  height: 100px;
+
+  animation-duration: 105s;
+}
+
+.cloud3 {
+  position: absolute;
+  left: 0;
+  background: rgb(205, 205, 205);
+  border-radius: 1000px;
+  animation: cloud1 47s 1 linear;
+  z-index: 100;
+}
+.cloud3::before {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: 40%;
+  width: 50%;
+  height: 150%;
+  background: rgb(205, 205, 205);
+  border-radius: 50%;
+}
+
+.cloud3::after {
+  content: "";
+  position: absolute;
+  top: -30%;
+  right: 50%;
+  width: 30%;
+  height: 100%;
+  background: rgb(205, 205, 205);
+  border-radius: 50%;
+}
+
+.cloud3.ten {
+  top: 15%;
+  left: -100%;
+  width: 300px;
+  height: 100px;
+
+  animation-duration: 55s;
+}
+.cloud4 {
+  position: absolute;
+  left: 0;
+  background: rgb(205, 205, 205);
+  border-radius: 1000px;
+  animation: cloud2 47s 1 linear;
+  z-index: 100;
+}
+.cloud4::before {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: 40%;
+  width: 50%;
+  height: 150%;
+  background: rgb(205, 205, 205);
+  border-radius: 50%;
+}
+
+.cloud4::after {
+  content: "";
+  position: absolute;
+  top: -30%;
+  right: 50%;
+  width: 30%;
+  height: 100%;
+  background: rgb(205, 205, 205);
+  border-radius: 50%;
+}
+
+.cloud4.eleven {
+  top: 35%;
+  left: -100%;
+  width: 150px;
+  height: 50px;
+
+  animation-duration: 55s;
+}
+
 /*Cloud Animations*/
 @keyframes cloud {
   from {
     left: -20%;
+    transform: translateX(-100%);
+  }
+  to {
+    left: 100%;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes cloud1 {
+  from {
+    left: 50%;
+    transform: translateX(-100%);
+  }
+  to {
+    left: 100%;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes cloud2 {
+  from {
+    left: 20%;
     transform: translateX(-100%);
   }
   to {
