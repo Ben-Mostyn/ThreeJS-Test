@@ -1,7 +1,7 @@
 .canvas-container {
-  height: 30vh;
+  height: 20vh;
 
-  width: 286px;
+  width: 236px;
   position: absolute;
   right: 0px;
   top: 10px;
@@ -9,13 +9,13 @@
   border-radius: 50%;
   -webkit-box-shadow: 5px 5px 45px 34px rgba(249, 255, 22, 0.44);
   box-shadow: 5px 5px 45px 34px rgba(249, 255, 22, 0.44),
-    inset 5px 5px 45px 34px rgba(249, 255, 22, 0.44);
+    inset 5px 5px 45px 134px rgba(249, 255, 22, 0.44);
 }
 
 .moon-container {
-  height: 30vh;
+  height: 20vh;
 
-  width: 290px;
+  width: 195px;
   position: absolute;
   right: 0px;
   top: 10px;

@@ -31,7 +31,7 @@ nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  z-index: 10;
+  z-index: 102;
 }
 .hamburger {
   margin-left: 0.5%;
@@ -65,6 +65,7 @@ nav {
   top: 7vh;
   justify-content: center;
   align-items: center;
+  z-index: 102;
 }
 
 @media (max-width: 1200px) {
